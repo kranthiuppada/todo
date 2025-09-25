@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-
-const DB_URL =
+const dotenv = require('dotenv');
+dotenv.config();
+const DB_URL =process.env.MONGO_URL;
 
 mongoose.connect(DB_URL)
     .then(() => {
